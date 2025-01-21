@@ -1,0 +1,846 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* .appear {
+  animation: appear ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+} */
+
+:root {
+  --primary: #002c78;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.gowunbatang-reg {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gowunbatang-bold {
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  background-color: #000f2a;
+  display: flex;
+  justify-content: left;
+}
+
+.moon-button {
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+  background-image: url("../icon/pause-fill.svg");
+  background-size: contain;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.moon-button:hover {
+  transform: scale(1.1);
+}
+
+.moon-button.playing {
+  background-image: url("../icon/pause-fill.svg"); /* Ganti dengan URL icon bulan saat bermain */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.moon-button.paused {
+  background-image: url("../icon/play-fill.svg"); /* Ganti dengan URL icon bulan saat dijeda */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#sectionBesar {
+  display: none;
+  transition: all 1s ease-in-out;
+}
+
+#sectionKecil {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.pengantin {
+  padding: 3px;
+  width: 260px;
+  height: 260px;
+  margin-bottom: 15px;
+  border: 4px solid var(--primary);
+  border-radius: 50px 0;
+  animation: fade-in 800ms ease-in-out;
+  z-index: 2;
+}
+
+.cover {
+  background-image: url(../images/bg.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 60% 0;
+}
+
+.cover p {
+  color: var(--primary);
+  font-size: 20px;
+  animation: fade-in 800ms ease-in-out;
+}
+
+.cover h1 {
+  color: var(--primary);
+  font-size: 60px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0;
+  animation: fade-in 800ms ease-in-out;
+}
+
+.cover div {
+  margin-bottom: 20px;
+  font-size: 17px;
+  animation: fade-in 800ms ease-in-out;
+}
+
+.ayat {
+  background-color: #2399b3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 25px;
+}
+
+.ayat p.judul {
+  margin: 30px 0;
+  padding-bottom: 5px;
+  width: 70%;
+  font-size: 20px;
+  border-bottom: 3px solid white;
+  border-radius: 5px;
+}
+
+.ayat .arab {
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.ayat .translation {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.mempelai {
+  background-image: url(../images/bg_bunga_2.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding: 20% 30px;
+  color: var(--primary);
+}
+
+.mempelai img {
+  width: 250px;
+}
+
+.mempelai p {
+  color: var(--primary);
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mempelai .desk {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.pengantin-pria .foto,
+.pengantin-wanita .foto {
+  width: 175px;
+  height: 250px;
+  object-fit: cover;
+  padding: 3px;
+  margin-top: 20px;
+  border-radius: 100px;
+  border: 4px solid var(--primary);
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.pengantin-pria h1,
+.pengantin-wanita h1 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 60px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.pengantin-pria h3,
+.pengantin-wanita h3 {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.pengantin-pria p,
+.pengantin-wanita p {
+  margin-top: 10px;
+}
+
+.pengantin-pria .ig,
+.pengantin-wanita .ig {
+  cursor: pointer;
+  padding: 3% 5%;
+  background-color: var(--primary);
+  border: 2px solid white;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.pengantin-pria .instagram,
+.pengantin-wanita .instagram {
+  width: 20px;
+}
+
+.acara {
+  background-color: #2399b3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 25px;
+  width: 100%;
+}
+
+.dan {
+  color: var(--primary);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.akad,
+.resepsi {
+  background-color: white;
+  color: var(--primary);
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.akad .judul,
+.resepsi .judul {
+  background-color: #005eff;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+.akad .tanggal,
+.resepsi .tanggal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.akad .tanggal .angka,
+.resepsi .tanggal .angka {
+  color: var(--primary);
+  font-size: 100px;
+}
+
+.akad .tanggal .teks,
+.resepsi .tanggal .teks {
+  text-align: start;
+  color: var(--primary);
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.akad .garis,
+.resepsi .garis {
+  color: var(--primary);
+  font-size: 35px;
+  margin-top: -20px;
+}
+
+.akad .Lokasi,
+.resepsi .Lokasi {
+  margin-top: -10px;
+  color: var(--primary);
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.countdown {
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.countdown h1 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.lokasi {
+  background-image: url(../images/bg_bunga_2.jpg);
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding: 19% 30px;
+}
+
+.lokasi h1 {
+  color: var(--primary);
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.lokasi p {
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.lokasi .maps {
+  width: 90%;
+  height: 250px;
+  border: 4px solid white;
+  border-radius: 20px;
+}
+
+.lokasi .lihatPeta {
+  color: var(--primary);
+  margin-top: 40px;
+  font-weight: 700;
+  font-size: 20px;
+  border-top: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
+  border-radius: 15px;
+  padding: 5px 40px;
+  transition: all 500ms ease-in-out;
+}
+
+.lokasi .lihatPeta:hover {
+  background-color: #5490ff71;
+  transform: scale(1.1);
+}
+
+.galeri {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #2399b3;
+}
+
+.galeri h1 {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.galeri img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  padding: 5px 5px 15px 5px;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.img-container .mySlide img {
+  vertical-align: middle;
+  width: 75%;
+  height: 400px;
+}
+
+.mySlide {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev {
+  left: 0;
+  margin-left: -20px;
+}
+
+.next {
+  right: 0;
+  margin-right: -20px;
+  border-radius: 3px 0 0 3px;
+}
+
+.galeri iframe {
+  padding: 5px 5px 15px 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  background-color: white;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.galeri iframe:hover {
+  transform: scale(1.05);
+}
+
+.rsvp {
+  background-image: url(../images/bg_bunga_2.jpg);
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding: 13% 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+label {
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.rsvp h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.confirm {
+  font-size: 20px;
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  background-color: #000f2ac6;
+}
+
+.radio-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.radio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 140px;
+  padding: 10px 5px 5px 5px;
+  background-color: #000f2ac6;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+  cursor: pointer;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #002c78;
+  border-radius: 50%;
+  background-color: #fff;
+  vertical-align: middle; /* Align with label text */
+  position: relative;
+  top: -3px; /* Adjust if necessary */
+}
+
+.radio-container input[type="radio"]:checked + label::before {
+  background-color: #002c78;
+  border-color: #002c78;
+}
+
+.radio-container label {
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.confirm {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--primary);
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  width: 90%;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #001d4f;
+}
+
+.rsvp h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#submittedData {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 10px;
+  width: 110%;
+  height: 250px;
+  background-color: rgb(113, 186, 255);
+  padding: 20px;
+  border-radius: 5px;
+  border: 3px solid #0059ffc6;
+  overflow-y: scroll;
+}
+
+#submittedData h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.submitted-item {
+  background-color: #000f2ac6;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.submitted-item h3 {
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  color: white;
+}
+
+.submitted-item p {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.hadiah {
+  background-color: #2399b3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 25px;
+  width: 100%;
+}
+
+.hadiah h1 {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.hadiah .card {
+  width: 90%;
+  background-color: white;
+  margin-top: 20px;
+  border: 3px solid #005eff;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.hadiah .card .bank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hadiah .card .bank p {
+  color: var(--primary);
+  font-weight: 700;
+  text-align: left;
+}
+
+.hadiah .card img {
+  width: 100px;
+}
+
+.atau {
+  color: var(--primary);
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.penutup {
+  background-image: url(../images/bg_bunga_2.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 30px;
+}
+
+.penutup p {
+  color: var(--primary);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.penutup h1 {
+  color: var(--primary);
+  font-size: 50px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0;
+}
+
+.penutup div {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.penutup .garis {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+@media (min-width: 768px) {
+  #sectionBesar {
+    width: 70vw;
+    background-image: url(../images/Pengantin.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    animation: fade-in 800ms ease-in-out;
+  }
+
+  .pembungkus {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000f2ad7;
+    width: 100%;
+    height: 100%;
+  }
+
+  #sectionBesar h1 {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 75px;
+    margin: 10px 0;
+  }
+
+  #sectionBesar p {
+    font-size: 20px;
+  }
+
+  #sectionKecil {
+    width: 30vw;
+    border-left: 5px solid #86e9ff;
+  }
+
+  .cover {
+    background-size: contain;
+  }
+
+  .cover p {
+    font-size: 20px;
+  }
+
+  .cover h1 {
+    font-size: 50px;
+  }
+
+  .cover div {
+    font-size: 15px;
+  }
+
+  .open {
+    font-size: 15px;
+  }
+
+  .mempelai {
+    width: 30vw;
+  }
+
+  #flipdown {
+    width: 100%;
+    align-self: center;
+    margin-left: 2vw;
+  }
+
+  .lokasi .maps {
+    width: 26%;
+    height: 200px;
+  }
+}

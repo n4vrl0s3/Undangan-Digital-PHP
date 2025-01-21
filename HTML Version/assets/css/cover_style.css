@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+:root {
+  --primary: #678fd3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.gowunbatang-reg {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gowunbatang-bold {
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: #000f2a;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  background-image: url(../images/bg.png);
+  background-size: cover;
+  background-position: center;
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s ease-in-out;
+}
+
+.pengantin {
+  padding: 3px;
+  width: 260px;
+  height: 260px;
+  margin-bottom: 15px;
+  border: 4px solid var(--primary);
+  border-radius: 50px 0;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s ease-in-out;
+}
+
+.cover p {
+  color: var(--primary);
+  font-size: 25px;
+}
+
+.cover h1 {
+  color: var(--primary);
+  font-size: 60px;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 20px 0;
+}
+
+.cover div {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.open {
+  cursor: pointer;
+  padding: 3% 7%;
+  background-color: var(--primary);
+  border: 2px solid white;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    width: 30vw;
+  }
+
+  .cover p {
+    font-size: 20px;
+  }
+
+  .cover h1 {
+    font-size: 50px;
+  }
+
+  .cover div {
+    font-size: 15px;
+  }
+
+  .open {
+    font-size: 15px;
+  }
+
+  .slide-out {
+    transform: translateX(35vw);
+  }
+}

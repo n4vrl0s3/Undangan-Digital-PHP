@@ -1,18 +1,24 @@
-# Undangan Digital
+# Digital Invitation
 
-Aplikasi undangan digital website yang dibuat oleh Solehul Akmal adalah sebuah platform online yang memungkinkan pengguna untuk membuat dan mengirimkan undangan pernikahan secara digital. Dengan menggunakan aplikasi ini, pengguna dapat menghemat biaya cetak undangan fisik, serta lebih efisien dalam mengelola daftar tamu undangan.
+The digital invitation website application created by Solehul Akmal is an online platform that allows users to create and send wedding invitations digitally. By using this application, users can save on the cost of printing physical invitations and manage their guest lists more efficiently.
 
 <hr><br>
 
 ## Purpose of This Repository
 
-Website undangan digital adalah sebuah platform online yang dirancang untuk mempermudah proses pembuatan dan pengiriman undangan secara digital. Dengan antarmuka yang user-friendly, pengguna dapat dengan mudah menyesuaikan undangan mereka sesuai dengan keinginan, termasuk:
+The digital invitation website is an online platform designed to simplify the process of creating and sending invitations digitally. With a user-friendly interface, users can easily customize their invitations according to their preferences, including:
 
-- **Template yang Dapat Disesuaikan:** Berbagai pilihan template yang bisa disesuaikan untuk berbagai acara dan preferensi.
-- **Teks dan Gambar Kustom:** Kemungkinan untuk menambahkan teks, gambar, dan logo yang bersifat personal pada undangan.
-- **Konfirmasi Kehadiran Digital:** Fitur RSVP (konfirmasi kehadiran) yang memungkinkan tamu untuk mengkonfirmasi kehadiran mereka secara online.
-- **Detail Acara:** Bagian untuk memberikan informasi detail mengenai acara, seperti tanggal, waktu, lokasi, dan dress code.
-- **Berbagi di Media Sosial:** Pilihan untuk dengan mudah membagikan undangan di berbagai platform media sosial.
+- **Customizable Templates:** Various template options that can be customized for different events and preferences.
+- **Custom Text and Images:** The ability to add personal text, images, and logos to the invitations.
+- **Digital RSVP:** An RSVP feature that allows guests to confirm their attendance online.
+- **Event Details:** A section to provide detailed information about the event, such as date, time, location, and dress code.
+- **Social Media Sharing:** Options to easily share invitations on various social media platforms.
+
+<hr><br>
+
+## Demo
+
+You can view a live demo of the application [here](https://undangan-digital-php.guanshiyinnn.com/).
 
 <hr><br>
 
@@ -34,21 +40,28 @@ Website undangan digital adalah sebuah platform online yang dirancang untuk memp
 
 <hr><br>
 
+## Project Setup
+
+1. **Ensure you have a web server installed (e.g., XAMPP, WAMP, MAMP).**
+2. **Make sure you have Git installed on your machine.**
+
+<hr><br>
+
 ## Steps to Run
 
-1. Navigate to your web server's root directory (e.g., `htdocs` for XAMPP)
+1. **Navigate to your web server's root directory (e.g., `htdocs` for XAMPP)**
 
 ```bash
 cd /path/to/htdocs
 ```
 
-2. Clone this repository
+2. **Clone this repository**
 
 ```bash
 git clone https://github.com/username/Undangan-Digital-PHP.git
 ```
 
-3. Open your browser and navigate to
+3. **Open your browser and navigate to**
 
 ```
 http://localhost/Undangan-Digital-PHP

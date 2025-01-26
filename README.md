@@ -16,7 +16,7 @@ The digital invitation website is an online platform designed to simplify the pr
 
 <hr><br>
 
-## Demo
+## Demonstration
 
 You can view a live demo of the application [here](https://undangan-digital-php.guanshiyinnn.com/).
 
@@ -77,6 +77,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 <div align=center>
   <a href="https://www.instagram.com/guanshiyin_/">
-     <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=20:72aae3,100:cadbf5&section=footer&reversal=false&textBg=false&fontAlignY=50&descAlign=48&descAlignY=59"/>
+    <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=100:393E46,20:F7F7F7&section=footer&reversal=false&textBg=false&fontAlignY=50&descAlign=48&descAlignY=59"/>
   </a>
 </div>

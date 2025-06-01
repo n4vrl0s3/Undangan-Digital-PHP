@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undangan Farhan & Sarah</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdf6f0;
+      color: #333;
+    }
+    .splash-screen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('/mnt/data/1441be62-e229-412e-9b55-dd919fc839a8.png') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+    }
+    .splash-screen button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background: #6a91c2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .main-content {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #b26b4f;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #b26b4f;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 10px 0;
+    }
+    .footer {
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="splash-screen" id="splash">
+    <button onclick="openInvitation()">💌 Buka Undangan</button>
+  </div>
+
+  <div class="main-content" id="content">
+    <div class="container">
+      <h2>💌 Undangan Pernikahan</h2>
+      <p>Kepada Yth.</p>
+      <h3>Kenny &amp; Partner</h3>
+
+      <div class="section">
+        <h1>Farhan &amp; Sarah</h1>
+        <p>Putra dari Bapak Ahmad & Ibu Fatimah<br>
+           Putri dari Bapak Zainal & Ibu Nurhayati</p>
+      </div>
+
+      <div class="section">
+        <h2>Akad Nikah</h2>
+        <p>Sabtu, 20 Juli 2025<br>09.00 WIB<br>Masjid Raya Al-Ikhlas, Jakarta</p>
+      </div>
+
+      <div class="section">
+        <h2>Resepsi</h2>
+        <p>Sabtu, 20 Juli 2025<br>11.00 – 14.00 WIB<br>Gedung Graha Cendekia, Jakarta Selatan</p>
+      </div>
+
+      <div class="section">
+        <h2>Rekening Hadiah</h2>
+        <p>BCA – 1234567890 a.n. Farhan S</p>
+      </div>
+
+      <div class="section">
+        <a class="button" href="https://maps.google.com?q=Graha+Cendekia+Jakarta+Selatan" target="_blank">📍 Lokasi Acara</a><br>
+        <a class="button" href="https://youtube.com/@pernikahanfarhansarah/live" target="_blank">🎥 Live Streaming</a>
+      </div>
+
+      <div class="section">
+        <p>Merupakan kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+        <p>Hormat kami,<br><strong>Farhan & Sarah</strong></p>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2025 Farhan & Sarah Wedding Invitation</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openInvitation() {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

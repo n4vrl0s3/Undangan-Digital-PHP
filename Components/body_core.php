@@ -13,9 +13,9 @@
     <section id="sectionKecil">
       <div class="cover" id="cover">
         <img
-          src="Assets/images/Pengantin.jpg"
-          alt="pengantin"
-          class="pengantin"
+          src="Assets/images/image.png"
+          alt="pg"
+          class="pg"
         />
         <p class="gowunbatang-bold">The Wedding Of</p>
         <h1>Akmal & Lisa</h1>

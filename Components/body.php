@@ -2,12 +2,12 @@
     <section id="sectionKecil">
       <div class="cover" id="cover">
         <img
-          src="Assets/images/Pengantin.jpg"
-          alt="pengantin"
-          class="pengantin"
+          src="Assets/images/a.png"
+          alt="pg"
+          class="pg"
         />
         <p class="gowunbatang-bold">Undangan Pernikahan</p>
-        <h1>Akmal & Lisa</h1>
+        <h1>Kenny Js & Pertiwi</h1>
         <div class="gowunbatang-bold">
           Yang Terhormat <br />
           Bapak/Ibu/Saudara/I
